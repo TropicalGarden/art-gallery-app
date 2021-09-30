@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_between_elements">2dp</dimen>
+    <dimen name="margin_topic">4dp</dimen>
+    <dimen name="min_text_height">8sp</dimen>
+    <dimen name="min_button_size">48dp</dimen>
+</resources>
