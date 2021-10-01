@@ -7,10 +7,10 @@ data class Art(
 )
 
 data class Artwork(
-    @Json(name = "deviationid") var artworkId: String,
-    var content: Content
+    @Json(name = "deviationid") val artworkId: String,
+    val content: Content
 )
 
 data class Content(
-    @Json(name = "src") var imageSource: String
+    @Json(name = "src") val imageSource: String
 )

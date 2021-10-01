@@ -40,7 +40,7 @@ class ArtworkViewModel : ViewModel() {
 
             } catch (e: Exception) {
                 _status.value = DeviantApiStatus.ERROR
-                _art.value!!.artworks = listOf()
+                _art.value?.artworks = listOf()
             }
         }
     }
