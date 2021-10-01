@@ -15,8 +15,8 @@ class ArtworkViewModel : ViewModel() {
     private val _status = MutableLiveData<DeviantApiStatus>()
     val status: LiveData<DeviantApiStatus> = _status
 
-    private val _artworks = MutableLiveData<List<Artwork>>()
-    val artworks: LiveData<List<Artwork>> = _artworks
+    private val _art = MutableLiveData<Art>()
+    val art: LiveData<Art> = _art
 
     init {
         getArtworks()
@@ -32,15 +32,15 @@ class ArtworkViewModel : ViewModel() {
                     TokenRequest.clientSecret
                 )
 
-                _artworks.value = DeviantApi.retrofitService.getArt(
+                _art.value = DeviantApi.retrofitService.getArt(
                     "${token.tokenType} ${token.accessToken}"
-                ).artworks
+                )
 
                 _status.value = DeviantApiStatus.DONE
 
             } catch (e: Exception) {
                 _status.value = DeviantApiStatus.ERROR
-                _artworks.value = listOf()
+                _art.value!!.artworks = listOf()
             }
         }
     }

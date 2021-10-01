@@ -6,4 +6,4 @@
     android:name="com.example.artgallery.ui.ArtworkFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_artwork_list" />
+    tools:layout="@layout/fragment_artwork" />

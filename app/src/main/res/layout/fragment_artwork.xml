@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.ArtworkFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
-            name="viewModel"
+            name="artworkViewModel"
             type="com.example.artgallery.model.ArtworkViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="com.example.artgallery.ui.artworkFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/artworks_grid"
@@ -27,18 +27,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:listData="@{viewModel.artworks}"
+            app:listData="@{artworkViewModel.art.artworks}"
             app:spanCount="2"
             tools:itemCount="16"
             tools:listitem="@layout/artwork_item" />
 
         <ImageView
             android:id="@+id/status_image"
-            deviantApiStatus="@{viewModel.status}"
-            android:padding="8dp"
+            deviantApiStatus="@{artworkViewModel.status}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:importantForAccessibility="no"
+            android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

@@ -3,14 +3,14 @@ package com.example.artgallery.model
 import com.squareup.moshi.Json
 
 data class Art(
-    @Json(name = "results") val artworks: List<Artwork>
+    @Json(name = "results") var artworks: List<Artwork>
 )
 
 data class Artwork(
-    @Json(name = "deviationid") val artworkId: String,
-    val content: Content
+    @Json(name = "deviationid") var artworkId: String,
+    var content: Content
 )
 
 data class Content(
-    @Json(name = "src") val imageSource: String
+    @Json(name = "src") var imageSource: String
 )
