@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.artgallery.R
 import com.example.artgallery.model.Artwork
-import com.example.artgallery.model.ArtworkViewModel.DeviantApiStatus
+import com.example.artgallery.model.view.ArtworkViewModel.DeviantApiStatus
 
 @BindingAdapter("imageUrl")
 fun bindImage(imageView: ImageView, imageUrl: String?) {

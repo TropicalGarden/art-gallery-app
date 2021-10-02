@@ -1,9 +1,10 @@
-package com.example.artgallery.model
+package com.example.artgallery.model.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.artgallery.model.Art
 import com.example.artgallery.network.model.TokenRequest
 import com.example.artgallery.network.service.DeviantApi
 import kotlinx.coroutines.launch
